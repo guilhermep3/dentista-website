@@ -1,3 +1,5 @@
+import { Button } from "@/components/button"
+
 export const Hero = () => {
 
    return (
@@ -6,12 +8,19 @@ export const Hero = () => {
             <div className="hero-left">
                <h1 className="hero-title">Experimente a <span>Excelência Odontológica</span> com um toque suave</h1>
                <h2 className="hero-subtitle">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </h2>
-               <button className="btn">
-                  Agendar
-                  <div className="arrow-svg">
-                     <img src="./svgs/arrow-sm-right-svgrepo-com.svg" alt="" />
+               <Button text="Enviar"/>
+               <div className="hero-rating">
+                  <div className="hero-rating-top">
+                     <p>Avaliação Google</p>
+                     <span>5.0</span>
+                     <img src="./svgs/star-svgrepo-com.svg" alt="estrela de avaliação" className="star-rating" />
+                     <img src="./svgs/star-svgrepo-com.svg" alt="estrela de avaliação" className="star-rating" />
+                     <img src="./svgs/star-svgrepo-com.svg" alt="estrela de avaliação" className="star-rating" />
+                     <img src="./svgs/star-svgrepo-com.svg" alt="estrela de avaliação" className="star-rating" />
+                     <img src="./svgs/star-svgrepo-com.svg" alt="estrela de avaliação" className="star-rating" />
                   </div>
-               </button>
+                  <p>Baseado em 480 avaliações</p>
+               </div>
             </div>
             <div className="hero-right">
                <img src="./dentista.png" alt="imagem da dentista Ana Vitoria" className="hero-image" />
