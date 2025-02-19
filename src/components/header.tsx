@@ -10,7 +10,7 @@ export const Header = () => {
             <nav>
                <ul className="list-links">
                   <li className="li-dropdown">
-                     <a href="home" className="home">Início</a>
+                     <a href="/" className="home">Início</a>
                      <div className="arrow-div">
                         <span className="span-arrow"></span>
                         <span className="span-arrow"></span>
@@ -18,6 +18,7 @@ export const Header = () => {
                      <div className="dropdown">
                         <a href="#hero">Início</a>
                         <a href="#about">Sobre</a>
+                        <a href="#clinic">Clínica</a>
                         <a href="#services">Serviços</a>
                         <a href="#team">Time</a>
                         <a href="#local">Local</a>

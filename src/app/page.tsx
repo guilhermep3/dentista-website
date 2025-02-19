@@ -4,6 +4,8 @@ import { Emphasis } from "./(auth)/_components/emphasis";
 import { About } from "./(auth)/_components/about";
 import { Services } from "./(auth)/_components/services";
 import { Faixa } from "./(auth)/_components/faixa";
+import { Local } from "./(auth)/_components/local";
+import { GoUpBtn } from "@/components/goUpBtn";
 
 export default function Home() {
    return (
@@ -14,9 +16,8 @@ export default function Home() {
          <About/>
          <Services/>
          <Faixa/>
-         <div className="up-btn">
-            <img src="./svgs/arrow-down-svgrepo-com.svg" alt="" />
-         </div>
+         <Local/>
+         <GoUpBtn/>
       </main>
    );
 }
