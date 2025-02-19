@@ -2,8 +2,8 @@
   --font-poppins: var(--poppins);
   --background: #ffffff;
   --foreground: #171717;
-  --blue1: #EFF8FF;
-  --blue2: #64c2da;
+  --blue1: #e8f4fd;
+  --blue2: #85d4e7;
   --blue3: #23adcf;
   --blue4: #043044;
 }
@@ -59,6 +59,21 @@ body {
   height: 20px;
   margin-bottom: -2px;
   margin-right: 4px;
+}
+.up-btn{
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  width: 40px;
+  border: 1px solid var(--blue4);
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.up-btn img{
+  width: 100%;
+}
+.main{
+  position: relative;;
 }
 
 .header{
@@ -265,7 +280,7 @@ body {
   padding: 10px;
   width: fit-content;
   background-color: #ffffff;
-  box-shadow: 0px 2px 5px #e2e2e2;
+  box-shadow: 0px 2px 5px #dbdbdb;
   border-radius: 12px;
   animation: moveDentistBox 3s infinite linear;
 }
@@ -282,7 +297,7 @@ body {
 }
 .dentist-box img{
   width: 80px;
-  background-color: #e2e2e2;
+  background-color: #dbdbdb;
 }
 .dentist-box-name{
   font-weight: bold;
@@ -298,7 +313,7 @@ body {
   padding: 16px;
   border-radius: 50%;
   background-color: #ffffff;
-  box-shadow: 0px 0px 5px #e2e2e2;
+  box-shadow: 0px 0px 5px #dbdbdb;
 }
 .icon-hero1{
   top: 20%;
@@ -380,11 +395,91 @@ body {
   flex-direction: column;
 }
 
-.service-img{
+.service{
   width: 300px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px #dbdbdb;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.service:hover{
+  border: 2px solid var(--blue2);
+}
+.service-img{
+  width: 100%;
+}
+.service-infos{
+  padding: 10px;
+  padding-bottom: 12px;
 }
 .service-title{
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   color: var(--blue4);
+}
+.service-desc{
+  font-size: 15px;
+  margin: 8px 0;
+}
+.services-list{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.read-more{
+  display: flex;
+  width: fit-content;
+  gap: 8px;
+  font-size: 16px;
+  color: var(--blue3);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.service:hover .read-more{
+  transform: scale(1.02);
+}
+.read-more img{
+  width: 28px;
+  border: 1px solid var(--blue3);
+  border-radius: 50%;
+}
+.faixa{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 16px;
+  overflow: hidden;
+  background-color: var(--blue4);
+}
+.faixa-box{
+  display: flex;
+  align-items: center;
+}
+.faixa-box img{
+  width: 40px;
+  height: auto;
+}
+.faixa-box p{
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+
+@media (max-width: 1100px){
+  .services-list{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px){
+  .services-list{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
