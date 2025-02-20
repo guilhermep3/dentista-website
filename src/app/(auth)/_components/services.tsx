@@ -1,3 +1,5 @@
+import { Button } from "@/components/button";
+
 export const Services = () => {
    const servicesData = [
       {
@@ -50,6 +52,7 @@ export const Services = () => {
                   </div>
                ))}
             </div>
+            <Button text="Ver todos"/>
          </div>
       </section>
    )

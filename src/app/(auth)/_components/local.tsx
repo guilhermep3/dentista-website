@@ -14,13 +14,13 @@ export const Local = () => {
       },
       {
          id: 3,
-         span: '+2K',
+         span: '+50K',
          title: 'Projetos realizados',
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quisquam animi nulla.'
       },
       {
-         id: 3,
-         span: '+22K',
+         id: 4,
+         span: '+10K',
          title: 'Avaliações positivas',
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quisquam animi nulla.'
       },

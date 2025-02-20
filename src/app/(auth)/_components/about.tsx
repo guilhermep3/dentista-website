@@ -16,19 +16,19 @@ export const About = () => {
                   cosméticos e especializados. Com consultórios odontológicos em todo o mundo.</p>
                <ul className="about-list">
                   <li className="about-list-item">
-                     <img src="./svgs/check-badge-svgrepo-com.svg" alt="" className="check" />
+                     <img src="./svgs/check-badge.svg" alt="" className="check" />
                      <p>Time Experiente</p>
                   </li>
                   <li className="about-list-item">
-                     <img src="./svgs/check-badge-svgrepo-com.svg" alt="" className="check" />
+                     <img src="./svgs/check-badge.svg" alt="" className="check" />
                      <p>Equipamentos tecnológicos</p>
                   </li>
                   <li className="about-list-item">
-                     <img src="./svgs/check-badge-svgrepo-com.svg" alt="" className="check" />
+                     <img src="./svgs/check-badge.svg" alt="" className="check" />
                      <p>Ambiente confortável</p>
                   </li>
                   <li className="about-list-item">
-                     <img src="./svgs/check-badge-svgrepo-com.svg" alt="" className="check" />
+                     <img src="./svgs/check-badge.svg" alt="" className="check" />
                      <p>Servico de emergências</p>
                   </li>
                </ul>

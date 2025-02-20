@@ -18,8 +18,9 @@ export const Header = () => {
                      <div className="dropdown">
                         <a href="#hero">Início</a>
                         <a href="#about">Sobre</a>
-                        <a href="#clinic">Clínica</a>
                         <a href="#services">Serviços</a>
+                        <a href="#clinic">Clínica</a>
+                        <a href="#highlights">Diferenciais</a>
                         <a href="#team">Time</a>
                         <a href="#local">Local</a>
                      </div>

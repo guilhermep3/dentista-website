@@ -5,7 +5,9 @@ import { About } from "./(auth)/_components/about";
 import { Services } from "./(auth)/_components/services";
 import { Faixa } from "./(auth)/_components/faixa";
 import { Local } from "./(auth)/_components/local";
-import { GoUpBtn } from "@/components/goUpBtn";
+import { GoTopButton } from "@/components/GoTopButton";
+import { Highlights } from "./(auth)/_components/highlights";
+import { Team } from "./(auth)/_components/team";
 
 export default function Home() {
    return (
@@ -17,7 +19,8 @@ export default function Home() {
          <Services/>
          <Faixa/>
          <Local/>
-         <GoUpBtn/>
+         <Highlights/>
+         <GoTopButton/>
       </main>
    );
 }
