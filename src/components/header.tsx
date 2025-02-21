@@ -1,3 +1,7 @@
+import { ChevronDown } from "lucide-react"
+import { Button } from "./button"
+import { MobileNavbar } from "./mobilenavbar"
+
 export const Header = () => {
 
    return (
@@ -7,14 +11,11 @@ export const Header = () => {
                <img src="./logo.png" alt="logo da Odontana" />
                <p>Odontana</p>
             </div>
-            <nav>
+            <nav className="nav-desktop">
                <ul className="list-links">
                   <li className="li-dropdown">
                      <a href="/" className="home">Início</a>
-                     <div className="arrow-div">
-                        <span className="span-arrow"></span>
-                        <span className="span-arrow"></span>
-                     </div>
+                     <ChevronDown className="arrow-down"/>
                      <div className="dropdown">
                         <a href="#hero">Início</a>
                         <a href="#about">Sobre</a>
@@ -30,14 +31,8 @@ export const Header = () => {
                   <li><a href="services">Serviços</a></li>
                </ul>
             </nav>
-            <div>
-               <button className="btn">
-                  Agendar
-                  <div className="arrow-svg">
-                     <img src="./svgs/arrow-sm-right-svgrepo-com.svg" alt="" />
-                  </div>
-               </button>
-            </div>
+            <Button text="Agendar" />
+            <MobileNavbar/>
          </div>
       </header>
    )

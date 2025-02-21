@@ -12,7 +12,7 @@ export const Local = () => {
                <MapLocal/>
             </div>
             <div className="local-right">
-               <TitleSection secId="Localização" title={<>Nossas <span>localizações</span></>} toCenter={false}/>
+               <TitleSection secId="Localização" title={<>Nossas <span>localizações</span></>} toCenter={true}/>
                <ul className="local-infos">
                   <li>
                      <MapPin/>

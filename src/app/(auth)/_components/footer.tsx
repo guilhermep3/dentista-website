@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react"
+import { Facebook, Instagram, Mail, Music2, Phone, Twitter } from "lucide-react"
 
 export const Footer = () => {
 
@@ -28,10 +28,22 @@ export const Footer = () => {
             <div className="footer-div">
                <h1>Redes Sociais</h1>
                <ul>
-                  <li><a href="#">Facebook</a></li>
-                  <li><a href="#">Instagram</a></li>
-                  <li><a href="#">Twitter</a></li>
-                  <li><a href="#">TikTok</a></li>
+                  <li>
+                     <Facebook/>
+                     <a href="#">Facebook</a>
+                  </li>
+                  <li>
+                     <Instagram/>
+                     <a href="#">Instagram</a>
+                  </li>
+                  <li>
+                     <Twitter/>
+                     <a href="#">Twitter</a>
+                  </li>
+                  <li>
+                     <Music2/> 
+                     <a href="#">TikTok</a>
+                  </li>
                </ul>
             </div>
             <div className="footer-div footer-media">
