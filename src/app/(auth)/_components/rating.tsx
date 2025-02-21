@@ -1,10 +1,7 @@
-"use client"
 import { TitleSection } from "@/components/titleSection";
 import { RatingSlide } from "@/components/ratingSlide";
-import { useRatingData } from "@/data/ratingData";
 
 export const Rating = () => {
-   const ratingData = useRatingData;
 
    return (
       <section id="rating">

@@ -18,7 +18,7 @@ export const useRatingData = [
    {
       id: 3,
       name: 'Joselma Cordeiro',
-      profession: 'Professor',
+      profession: 'Professora',
       img: 'rating-3.jpg',
       assessment: 'Minha consulta foi incrível! A dentista, Dra. Fernanda, foi extremamente atenciosa e cuidadosa. Ela explicou todos os procedimentos de forma clara e tirou todas as minhas dúvidas. Saí de lá me sentindo muito bem cuidada. Recomendo de olhos fechados!',
       stars: 5.0
@@ -40,23 +40,3 @@ export const useRatingData = [
       stars: 4.8
    },
 ]
-
-// < SwiperSlide >
-//    <div className="rating" >
-//       <Quote className="quote" />
-//          <p className="rating-text" > "Fui ao dentista hoje e adorei a experiência! O Dr. Carlos foi super atencioso e explicou tudo direitinho. A clínica é muito limpa e organizada, e o atendimento foi rápido. Saí de lá com um sorriso ainda maior. Recomendo demais!" </p>
-//             < div className = "rating-person" >
-//                <img src="./rating/rating-1.jpg" alt = "rating-1" />
-//                   <div className="rating-person-infos" >
-//                      <div className="rating-person-infos-top" >
-//                         <div className="rating-star-div" >
-//                            <p className="rating-name" > Marcos Martines </p>
-//                               < Star className = "star" />
-//                                  <span>5.0 </span>
-//                                  </div>
-//                                  </div>
-//                                  < div className = "rating-profession" > Desenvolvedor de sofware </div>
-//             </div>
-//       </div>
-//    </div>
-// </SwiperSlide>

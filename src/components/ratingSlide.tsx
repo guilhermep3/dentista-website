@@ -31,7 +31,7 @@ export const RatingSlide = () => {
                            <div className="rating-star-div">
                               <p className="rating-name">{item.name}</p>
                               <Star className="star" />
-                              <span>{item.stars.toString()}</span>
+                              <span>{item.stars.toFixed(1)}</span>
                            </div>
                         </div>
                         <div className="rating-profession">{item.profession}</div>
