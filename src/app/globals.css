@@ -2,10 +2,11 @@
   --font-poppins: var(--poppins);
   --background: #ffffff;
   --foreground: #171717;
-  --blue1: #e8f4fd;
+  --blue1: #ebf6ff;
   --blue2: #85d4e7;
   --blue3: #23adcf;
   --blue4: #043044;
+  --yellow: #dab200;
 }
 *{
   margin: 0;
@@ -23,7 +24,7 @@ body {
   scroll-behavior: smooth;
 }
 
-#hero, #whyus{
+#hero, #clinic, #team{
   background-color: var(--blue1);
 }
 .container, .container-col{
@@ -89,6 +90,12 @@ body {
 }
 .main{
   position: relative;;
+}
+.star{
+  width: 20px;
+  stroke: var(--yellow);
+  fill: var(--yellow);
+  margin-right: 4px;
 }
 
 .header{
@@ -275,7 +282,7 @@ body {
   font-weight: bold;
   margin-left: 12px;
   margin-right: 6px;
-  color: #dab200;
+  color: var(--yellow);
 }
 .hero-rating p:nth-child(2){
   color: #000000b7;
@@ -379,6 +386,8 @@ body {
   width: 500px;
 }
 .about-img2{
+  position: relative;
+  overflow: hidden;
   width: 440px;
   border: 8px solid #ffffff;
   border-radius: 32px;
@@ -386,6 +395,21 @@ body {
   margin-top: -110px;
   transform: translateX(100px);
   z-index: 3;
+}
+.about-img2::after{
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: #ff000024;
+  z-index: 100;
+  transition: all 0.7s linear;
+}
+.about-img2:hover .about-img2::after{
+  height: 100%;
 }
 .check{
   width: 32px;
@@ -602,20 +626,64 @@ body {
   color: var(--blue4);
 }
 
-
+.dentist-slide {
+  padding: 0 60px;
+}
+.team-container{
+  max-width: 1400px;
+  padding: 40px 0;
+  margin: 0 auto;
+  text-align: center;
+}
 .team-list{
+  margin: 60px 0;
+}
+.dentist{
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin: 40px 0;
+  padding: 0;
+  padding-bottom: 40px;
 }
 .dentist-image-area{
+  display: flex;
+  justify-content: center;
   border-radius: 40px;
+  background-color: #dbdbdb;
+  width: 330px;
+  position: relative;
   overflow: hidden;
 }
+.dentist-image-area::after{
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 0%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: #ffffff24;
+  z-index: 1;
+  transition: all 0.7s linear;
+}
+.dentist:hover .dentist-image-area::after{
+  height: 200%;
+}
 .dentist-image-area img{
-  width: 330px;
+  width: 100%;
+  transition: all 0.7s ease;
+  z-index: 1;
+}
+.dentist:hover .dentist-image-area img{
+  z-index: 10;
+  transition-delay: 0.1s;
+}
+.dentist:hover img{
+  transform: scale(1.10);
+}
+.dentist-info-area{
+  width: 100%;
 }
 .dentist-name{
   font-size: 20px;
@@ -627,6 +695,88 @@ body {
   color: #000000b7;
   text-align: center;
 }
+.dentist-social-medias{
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  bottom: -20%;
+  z-index: 10;
+  transition: all 0.7s ease;
+}
+.dentist:hover .dentist-social-medias{
+  bottom: 5%;
+}
+.sm-box{
+  padding: 8px;
+  background-color: var(--blue4);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sm-box:hover{
+  background-color: var(--blue3);
+}
+.sm-box svg{
+  width: 24px;
+  height: 24px;
+  margin-bottom: -4px;
+  stroke: #ffffff;
+}
+
+
+
+.ratings{
+  width: 100%;
+  margin: 0 auto;
+}
+.rating{
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+.rating-text{
+  font-size: 18px;
+}
+.rating-person{
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+.rating-person img{
+  width: 80px;
+  border-radius: 50%;
+}
+.rating-star-div{
+  display: flex;
+}
+.rating-star-div span{
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--yellow);
+}
+.rating-name{
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--blue4);
+  margin-right: 12px;
+  margin-bottom: 4px;
+}
+.rating-profession{
+  font-size: 15px;
+  color: #000000b7;
+}
+.quote{
+  width: 40px;
+  height: 40px;
+  stroke: var(--blue3);
+  margin-bottom: 8px;
+}
+.swiper-button-next{
+  margin-left: 40px;
+}
+.swiper-button-prev{
+  margin-right: 40px;
+}
 
 
 @media (max-width: 1100px){
@@ -637,5 +787,11 @@ body {
 @media (max-width: 768px){
   .services-list{
     grid-template-columns: repeat(1, 1fr);
+  }
+  .dentist-slide {
+    padding: 0 20px;
+  }
+  .dentist-image-area{
+    width: 300px;
   }
 }

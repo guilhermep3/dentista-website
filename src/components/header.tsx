@@ -22,6 +22,7 @@ export const Header = () => {
                         <a href="#clinic">Clínica</a>
                         <a href="#highlights">Diferenciais</a>
                         <a href="#team">Time</a>
+                        <a href="#rating">Avaliações</a>
                         <a href="#local">Local</a>
                      </div>
                   </li>
