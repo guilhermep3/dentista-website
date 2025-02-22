@@ -6,12 +6,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { useDentistData } from "@/data/dentistData";
-import { Facebook, Instagram, Twitter } from 'lucide-react';
 import { useEffect, useState } from "react";
+import { Dentist } from "./dentist";
 
 export const SlideTeam = () => {
    const [slidesPerView, setSlidesPerView] = useState(3);
    const dentistData = useDentistData;
+   const dentistDataSlice = dentistData.slice(0, 5)
 
    useEffect(() => {
       function checkMobileWidth() {
@@ -32,21 +33,10 @@ export const SlideTeam = () => {
          navigation
          spaceBetween={0}
       >
-         {dentistData.map((item) => (
+         {dentistDataSlice.map((item) => (
             <SwiperSlide key={item.id}>
                <div className="dentist-slide">
-                  <div className="dentist">
-                     <div className="dentist-image-area">
-                        <img src={`./dentist/${item.image}`} alt={"imagem do " + item.name} />
-                        <div className="dentist-social-medias">
-                           <div className="sm-box"><Facebook /></div>
-                           <div className="sm-box"><Instagram /></div>
-                           <div className="sm-box"><Twitter /></div>
-                        </div>
-                     </div>
-                     <p className="dentist-name">Dr. {item.name}</p>
-                     <p className="dentist-role">{item.role}</p>
-                  </div>
+                  <Dentist item={item}/>
                </div>
             </SwiperSlide>
          ))}

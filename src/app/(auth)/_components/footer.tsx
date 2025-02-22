@@ -27,7 +27,7 @@ export const Footer = () => {
             </div>
             <div className="footer-div">
                <h1>Redes Sociais</h1>
-               <ul>
+               <ul className="footer-ul-svg">
                   <li>
                      <Facebook/>
                      <a href="#">Facebook</a>
@@ -46,9 +46,9 @@ export const Footer = () => {
                   </li>
                </ul>
             </div>
-            <div className="footer-div footer-media">
-               <h1>Redes Sociais</h1>
-               <ul>
+            <div className="footer-div">
+               <h1>Contato</h1>
+               <ul className="footer-ul-svg">
                   <li>
                      <Mail/>
                      <p>seuemail@dominio.com</p>

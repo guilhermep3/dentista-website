@@ -14,24 +14,24 @@ export const Local = () => {
             <div className="local-right">
                <TitleSection secId="Localização" title={<>Nossas <span>localizações</span></>} toCenter={true}/>
                <ul className="local-infos">
-                  <li>
+                  <li className="reveal-bottom">
                      <MapPin/>
                      <p>Av. Albert Einstein, 627/701 - Morumbi, São Paulo - SP</p>
                   </li>
-                  <li>
+                  <li className="reveal-bottom">
                      <Phone/>
                      <p>(11) 9999-9999</p>
                   </li>
-                  <li>
+                  <li className="reveal-bottom">
                      <Mail/>
                      <p>@seuemail@dominio.com</p>
                   </li>
-                  <li>
+                  <li className="reveal-bottom">
                      <Clock/>
                      <p>Seg a Sex: 07: 22:00</p>
                   </li>
                </ul>
-               <Button text="Ver todos os locais"/>
+               <Button href="/locals" text="Ver todos os locais"/>
             </div>
          </div>
       </section>

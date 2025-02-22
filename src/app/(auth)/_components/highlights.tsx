@@ -1,12 +1,18 @@
+import { TitleSection } from "@/components/titleSection"
+
 export const Highlights = () => {
 
    return (
       <section id="highlights">
          <div className="container">
             <div className="highlights-left">
-               <h2 className="section-id"><img src="./svgs/star-2-svgrepo-com.svg" alt="star" className="star2" />Diferenciais</h2>
-               <h1 className="section-title">Nosso principais <span>diferenciais</span> para atender você</h1>
-               <p className="highlights-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nobis sit at architecto harum numquam obcaecati culpa minus. Minima architecto voluptas voluptatum hic a nemo velit, inventore id quaerat. Aut.</p>
+               <TitleSection toCenter={false}
+                  secId="Diferenciais"
+                  title={<>Nosso principais <span>diferenciais</span> para atender você</>}
+                  revealTitle="reveal-top"
+                  revealId="reveal-top"
+               /> 
+               <p className="highlights-text reveal-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nobis sit at architecto harum numquam obcaecati culpa minus. Minima architecto voluptas voluptatum hic a nemo velit, inventore id quaerat. Aut.</p>
                <div className="highlight-list">
                   <div className="highlight-box">
                      <div className="highlight-top">

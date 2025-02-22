@@ -1,4 +1,5 @@
 import { Button } from "@/components/button";
+import { TitleSection } from "@/components/titleSection";
 import { useServicesData } from "@/data/servicesData";
 
 export const Services = () => {
@@ -7,12 +8,11 @@ export const Services = () => {
    return (
       <section id="services">
          <div className="container">
-            <h2 className="section-id"><img src="./svgs/star-2-svgrepo-com.svg" alt="star" className="star2" />Serviços</h2>
-            <h1 className="section-title">Serviços de <span>alta qualidade</span> para você</h1>
-            <p className="section-desc">Estamos comprometidos com a sustentabilidade. iniciativas ecológicas.</p>
+            <TitleSection secId="Serviços" title={<>Serviços de <span>alta qualidade</span> para você</>} toCenter={false}/>
+            <p className="section-desc reveal-top">Estamos comprometidos com a sustentabilidade. iniciativas ecológicas.</p>
             <div className="services-list">
                {servicesData.map((item) => (
-                  <div className="service" key={item.id}>
+                  <div className="service reveal-bottom" key={item.id}>
                      <img src={`./services/${item.img}`} alt="pessoa em uma consulta odontológica" className="service-img" />
                      <img src={`./svgs/${item.icon}`} className="service-icon" alt={item.icon} />
                      <div className="service-infos">
@@ -23,7 +23,7 @@ export const Services = () => {
                   </div>
                ))}
             </div>
-            <Button text="Ver todos"/>
+            <Button href="/services" text="Ver todos"/>
          </div>
       </section>
    )

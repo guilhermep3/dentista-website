@@ -12,9 +12,12 @@ export const Clinic = () => {
                   <h1>Atendimento Compreensivo e cuidadoso para qualquer idade</h1>
                </div>
             </div>
-            <div className="local-infos">
+            <div className="local-infos-clinic">
                {clinicdata.map((item) => (
-                  <div className="local-box" key={item.id}>
+                  <div className={`local-box 
+                     ${item.id === 1 || item.id === 2 ? 'reveal-left' : 'reveal-right'}
+                     `}
+                     key={item.id}>
                      <span>{item.span}</span>
                      <p className="local-box-title">{item.title}</p>
                      <p className="local-box-desc">{item.description}</p>
