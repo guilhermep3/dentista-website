@@ -94,8 +94,8 @@ body {
 }
 .star{
   width: 20px;
-  stroke: var(--yellow);
-  fill: var(--yellow);
+  stroke: #dab200;
+  fill: #dab200;
   margin-right: 4px;
 }
 
@@ -602,7 +602,7 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
   margin-bottom: 40px;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -879,7 +879,7 @@ body {
 .rating-star-div span{
   font-size: 18px;
   font-weight: bold;
-  color: var(--yellow);
+  color: #dab200;
 }
 .rating-name{
   font-size: 18px;
@@ -1025,6 +1025,7 @@ footer{
 }
 .footer-ul-svg p{
   color: #ffffff;
+  font-size: 14px;
 }
 .footer-ul-svg svg, .footer-div svg{
   width: 20px;
@@ -1039,12 +1040,9 @@ footer{
 #about .section-desc{
   color: #000000;
 }
-.hero-about{
-  background-image: url('../../public/aboutpage/about-hero.jpeg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 600px;
+.hero-about, .hero-services{
+  background-color: var(--blue1);
+  padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1058,6 +1056,9 @@ footer{
 .moreabout-right{
   margin-left: 20px;
 }
+.moreabout-img{
+  filter: drop-shadow(0px 0px 8px #043044);
+}
 #purpose{
   background-color: var(--blue1);
 }
@@ -1068,8 +1069,8 @@ footer{
   gap: 40px;
 }
 .purpose-svg{
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   stroke: var(--blue3);
   fill: var(--blue3)
 }
@@ -1078,7 +1079,7 @@ footer{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   width: 320px;
   padding: 12px;
   border-radius: 12px;

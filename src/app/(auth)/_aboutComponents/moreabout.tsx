@@ -13,7 +13,9 @@ export const MoreAbout = () => {
                </p>
             </div>
             <div className="moreabout-right">
-               <img src="./aboutpage/moreabout.png" alt="" />
+               <div className="moreabout-img">
+                  <img src="./aboutpage/moreabout.png" alt="" />
+               </div>
             </div>
          </div>
       </section>

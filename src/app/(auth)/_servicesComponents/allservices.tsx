@@ -1,18 +1,13 @@
-import { Button } from "@/components/button";
-import { TitleSection } from "@/components/titleSection";
-import { useServicesData } from "@/data/servicesData";
+import { useServicesData } from "@/data/servicesData"
 
-export const Services = () => {
+export const AllServices = () => {
    const servicesData = useServicesData;
-   const servicesDataSlice = servicesData.slice(0, 4)
 
    return (
-      <section id="services">
+      <section id="allservices">
          <div className="container">
-            <TitleSection secId="Serviços" title={<>Serviços de <span>alta qualidade</span> para você</>} toCenter={true}/>
-            <p className="section-desc reveal-top">Estamos comprometidos com a sustentabilidade. iniciativas ecológicas.</p>
             <div className="services-list">
-               {servicesDataSlice.map((item) => (
+               {servicesData.map((item) => (
                   <div className="service reveal-bottom" key={item.id}>
                      <img src={`./services/${item.img}`} alt="pessoa em uma consulta odontológica" className="service-img" />
                      <img src={`./svgs/${item.icon}`} className="service-icon" alt={item.icon} />
@@ -24,7 +19,6 @@ export const Services = () => {
                   </div>
                ))}
             </div>
-            <Button href="/services" text="Ver todos"/>
          </div>
       </section>
    )

@@ -6,7 +6,7 @@ export const Purpose = () => {
       <section id="purpose">
          <div className="container-col">
             <TitleSection toCenter={true}
-               title={<>Nosso <span>Propósitos</span></>}
+               title={<>Nossos <span>Propósitos</span></>}
             />
             <div className='purposes'>
                <div className='purpose'>

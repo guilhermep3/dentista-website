@@ -8,7 +8,7 @@ export const Clinic = () => {
          <div className="container-col">
             <div className="local-image">
                <div className="local-blue-bg">
-                  <h2><img src="./svgs/star-2-svgrepo-com.svg" alt="star" className="star2" />Clínica</h2>
+                  <h2><img src="./svgs/star-2.svg" alt="star" className="star2" />Clínica</h2>
                   <h1>Atendimento Compreensivo e cuidadoso para qualquer idade</h1>
                </div>
             </div>
