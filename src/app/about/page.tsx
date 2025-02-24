@@ -1,5 +1,5 @@
 import { Header } from "@/components/header"
-import { Footer } from "../(auth)/_components/footer"
+import { Footer } from "../../components/footer"
 import { TitleSection } from "@/components/titleSection"
 import { MoreAbout } from "../(auth)/_aboutComponents/moreabout"
 import { Purpose } from "../(auth)/_aboutComponents/purpose";

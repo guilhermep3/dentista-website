@@ -30,7 +30,6 @@ export const Header = () => {
                   </li>
                   <li><a href="about">Sobre</a></li>
                   <li><a href="services">Serviços</a></li>
-                  <li><a href="locals">Locais</a></li>
                </ul>
             </nav>
             <Button href="/schedule" text="Agendar" />

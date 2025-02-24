@@ -1,5 +1,5 @@
 import { Header } from "@/components/header"
-import { Footer } from "../(auth)/_components/footer"
+import { Footer } from "../../components/footer"
 import { TitleSection } from "@/components/titleSection"
 import { AllServices } from "../(auth)/_servicesComponents/allservices"
 

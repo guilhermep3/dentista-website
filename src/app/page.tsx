@@ -10,7 +10,7 @@ import { Highlights } from "./(auth)/_components/highlights";
 import { Team } from "./(auth)/_components/team";
 import { Rating } from "./(auth)/_components/rating";
 import { Local } from "./(auth)/_components/local";
-import { Footer } from "./(auth)/_components/footer";
+import { Footer } from "../components/footer";
 import ScrollRevealWrapper from "@/utils/scrollRevealWrapper";
 
 export default function Home() {
