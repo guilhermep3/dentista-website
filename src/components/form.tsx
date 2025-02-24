@@ -1,10 +1,15 @@
 "use client"
+import { validarCPF } from "@/utils/validarCpf";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form"
 import { z } from "zod"
+import { useFormStore } from "@/store/formStore";
+import { useRouter } from "next/navigation";
 
 const scheduleSchema = z.object({
-   name: z.string().min(2, 'Preencha o campo corretamente'),
+   name: z.string().min(2, 'Preencha o campo corretamente')
+   .transform(value => value.trim())
+   .refine(value => /^\S+\s+\S+/.test(value), {message: 'Preencha com nome e sobrenome'}),
    birthday: z.string().refine(value => {
       const date = new Date(value);
       return !isNaN(date.getTime())
@@ -16,23 +21,12 @@ const scheduleSchema = z.object({
          const age = today.getFullYear() - date.getFullYear();
          return age > minAge || (age === minAge && today >= new Date(date.getFullYear() + minAge, date.getMonth(), date.getDate()))
       }),
-   cpf: z.string().min(11, 'CPF inválido'),
+   genre: z.enum(["Masculino", "Feminino", "Outro"]),
+   cpf: z.string().min(11, 'CPF deve ter 11 números').refine(validarCPF, {message: 'CPF inválido'}),
    number: z.string().min(9, 'Preencha o campo corretamente'),
    service: z.array(z.string()).min(1,'Selecione pelo menos uma opção'),
 })
 
-type formData = z.infer<typeof scheduleSchema>
-
-export const Form = () => {
-   const { register, handleSubmit, formState: {errors}} = useForm<formData>({
-      resolver: zodResolver(scheduleSchema)
-   });
-
-   const onSubmit = (data: formData) => {
-      console.log(data)
-   };
-
-   
 const services = [
    "Clareamento Dental",
    "Implante Dental",
@@ -43,6 +37,23 @@ const services = [
    "Harmonização Orofacial",
    "Odontopediatria"
 ];
+
+export type formData = z.infer<typeof scheduleSchema>
+
+export const Form = () => {
+   const { register, handleSubmit, formState: {errors}} = useForm<formData>({
+      resolver: zodResolver(scheduleSchema)
+   });
+   const {setFormData} = useFormStore();
+   const router = useRouter()
+
+   const onSubmit = (data: formData) => {
+      setFormData(data);
+      console.log(data);
+      router.push('/finish')
+   };
+
+
 
    return (
       <>
@@ -58,14 +69,17 @@ const services = [
             <div className="form-div">
                <label>
                   Data de nascimento
-                  <input type="date" />
+                  <input type="date" {...register("birthday")} />
                   {errors.birthday && <span className="error-input">{errors.birthday.message}</span>}
                </label>
                <label>
-                  Seu CPF
-                  <input type="text" {...register("cpf")}
-                     placeholder="Digite seu CPF" />
-                     {errors.cpf && <span className="error-input">{errors.cpf.message}</span>}
+                  Seu gênero
+                  <select {...register("genre")}>
+                     <option value="Masculino">Masculino</option>
+                     <option value="Feminino">Feminino</option>
+                     <option value="Outro">Outro</option>
+                  </select>
+                  {errors.genre && <span className="error-input">{errors.genre.message}</span>}
                </label>
             </div>
             <div className="form-div">
@@ -74,6 +88,12 @@ const services = [
                   <input type="text" {...register("number")}
                      placeholder="Número de telefone" />
                      {errors.number && <span className="error-input">{errors.number.message}</span>}
+               </label>
+               <label>
+                  Seu CPF
+                  <input type="text" {...register("cpf")}
+                     placeholder="Digite seu CPF" />
+                     {errors.cpf && <span className="error-input">{errors.cpf.message}</span>}
                </label>
             </div>
             <div className="form-div">

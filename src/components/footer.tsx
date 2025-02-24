@@ -10,7 +10,7 @@ export const Footer = () => {
                   <img src="./logo.png" alt="logo da Odontana" />
                   <p>Odontana</p>
                </div>
-               <p>O objetivo de nossa clínica é fornecer odontologia amigável e atenciosa e tratamentos odontológicos gerais, cosméticos e especializados do mais alto nível.</p>
+               <p className="footer-msg">O objetivo de nossa clínica é fornecer odontologia amigável e atenciosa e tratamentos odontológicos gerais, cosméticos e especializados do mais alto nível.</p>
             </div>
             <div className="footer-div">
                <h1>Links</h1>

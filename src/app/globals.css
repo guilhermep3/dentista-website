@@ -1134,13 +1134,14 @@ footer{
 .form-div label{
   display: flex;
   flex-direction: column;
+  gap: 4px;
   flex: 1;
   margin: 12px;
 }
 .form-div input, .form-div select{
   width: 100%;
   font-size: 16px;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #cfcfcf;
   background-color: #ffffff;
   border-radius: 8px;
@@ -1161,21 +1162,21 @@ footer{
   filter: brightness(0.9);
 }
 .error-input{
-  font-size: 12px;
-  background-color: #990000;
-  color: #ffffff;
-  padding: 6px;
+  font-size: 13px;
+  color: #990000;
+  padding: 2px;
 }
 .services-fieldset{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   padding: 12px;
   margin: 20px 0;
   border: 2px solid #dbdbdb;
   border-radius: 8px;
   background-color: #ffffff;
-  width: 50%;
+  width: 100%;
+  text-align: center;
 }
 .services-fieldset label{
   display: flex;
@@ -1184,10 +1185,156 @@ footer{
   font-size: 14px;
   cursor: pointer;
 }
+.modal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #36363680;
+  z-index: 30;
+  overflow-y: auto;
+}
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 95%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 24px;
+  background-color: #ffffff;
+}
+.modal-form{
+  flex-direction: column;
+}
+.modal-left, .modal-right{
+  flex: 1;
+}
+.modal-left{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.modal-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+.modal-right-top{
+  border-bottom: 1px solid #cfcfcf;
+}
+.modal-title{
+  font-size: 24px;
+  color: var(--blue4);
+}
+.modal-description{
+  font-size: 15px;
+  margin: 12px 0;
+}
+.modal-steps-title{
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+.steps-list li{
+  display: flex;
+  gap: 16px;
+  margin: 12px 0;
+  font-size: 15px;
+}
+.steps-list li span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50%;
+  background-color: var(--blue3);
+  color: #ffffff;
+  flex-shrink: 0;
+}
+.buttons-modal{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.modal-schedule-btn{
+  padding: 12px 20px;
+  border-radius: 24px;
+  border: none;
+  font-size: 18px;
+  background-color: var(--blue3);
+  color: #ffffff;
+  cursor: pointer;
+}
+.close-btn{
+  font-size: 15px;
+  padding: 8px 12px;
+  background-color: #dbdbdb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.finish-title{
+  text-align: center;
+  font-size: 28px;
+  color: var(--blue4);
+}
+.finish-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.finish-left, .finish-right{
+  flex: 1;
+}
+.finish-left p{
+  font-size: 16px;
+}
+.finish-right img{
+  width: 100%;
+}
+
 
 @media (max-width: 1100px){
   .services-list{
     grid-template-columns: repeat(2, 1fr);
+  }
+  .services-fieldset{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .modal{
+    flex-direction: column;
+    width: 75%;
+    max-width: 720px;
+    padding: 20px;
+  }
+  .modal-image {
+    width: 95%;
+    height: 95%;
+  }
+  .steps-list li{
+    font-size: 14px;
+  }
+  .modal-left, .modal-right{
+    flex: auto;
+  }
+  .fullteam-div{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
   }
 }
 @media (max-width: 768px){
@@ -1405,6 +1552,12 @@ footer{
   .footer-div p{
     font-size: 14px;
   }
+  .footer-message .footer-msg{
+    font-size: 14px;
+  }
+  .hero-about, .hero-services{
+    padding: 80px 0;
+  }
   .moreabout-right{
     margin: 0 auto;
   }
@@ -1420,5 +1573,31 @@ footer{
   .form-div label {
     font-size: 14px;
     margin: 8px;
+  }
+  .modal{
+    width: 95%;
+    max-width: 450px;
+  }
+  .modal-image {
+    width: 90%;
+    height: 90%;
+  }
+  .services-fieldset{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .steps-list li{
+    gap: 8px;
+  }
+  .fullteam-div{
+    gap: 24px;
+  }
+  .finish-div{
+    flex-direction: column;
+  }
+}
+@media (max-width: 654px){
+  .fullteam-div{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
 }

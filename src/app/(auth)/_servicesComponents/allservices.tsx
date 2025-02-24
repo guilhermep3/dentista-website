@@ -1,14 +1,26 @@
+"use client"
+import { Modal } from "@/components/modal";
 import { useServicesData } from "@/data/servicesData"
+import { serviceType } from "@/types/service";
+import { useState } from "react";
 
 export const AllServices = () => {
    const servicesData = useServicesData;
+   const [showModal, setShowModal] = useState<boolean>(false);
+   const [modalItem, setModalItem] = useState<serviceType>();
+
+   function handleShowModal(item: any){
+      setShowModal(true);
+      setModalItem(item);
+   };
 
    return (
       <section id="allservices">
          <div className="container">
             <div className="services-list">
                {servicesData.map((item) => (
-                  <div className="service reveal-bottom" key={item.id}>
+                  <div className="service reveal-top" key={item.id}
+                     onClick={() => handleShowModal(item)}>
                      <img src={`./services/${item.img}`} alt="pessoa em uma consulta odontológica" className="service-img" />
                      <img src={`./svgs/${item.icon}`} className="service-icon" alt={item.icon} />
                      <div className="service-infos">
@@ -20,6 +32,7 @@ export const AllServices = () => {
                ))}
             </div>
          </div>
+         {showModal && modalItem && <Modal infos={modalItem} setShowModal={() => setShowModal(!showModal)} />}
       </section>
    )
 }
