@@ -1,4 +1,3 @@
-import { Button } from "@/components/button";
 import { MapLocal } from "@/components/mapLocal";
 import { TitleSection } from "@/components/titleSection"
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
@@ -12,7 +11,7 @@ export const Local = () => {
                <MapLocal/>
             </div>
             <div className="local-right">
-               <TitleSection secId="Localização" title={<>Nossas <span>localizações</span></>} toCenter={true}/>
+               <TitleSection secId="Localização" title={<>Nossa <span>localização</span></>} toCenter={true}/>
                <ul className="local-infos">
                   <li className="reveal-bottom">
                      <MapPin/>
@@ -31,7 +30,6 @@ export const Local = () => {
                      <p>Seg a Sex: 07: 22:00</p>
                   </li>
                </ul>
-               <Button href="/locals" text="Ver todos os locais"/>
             </div>
          </div>
       </section>

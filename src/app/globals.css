@@ -933,7 +933,7 @@ body {
   color: var(--blue4);
 }
 .map-google{
-  filter: saturate(0);
+  filter: saturate(0.5);
   transition: all 0.7s;
 }
 .map-google:hover {
@@ -1448,6 +1448,7 @@ footer{
   }
   .rating{
     width: 100%;
+    padding-bottom: 20px;
   }
   .container, .container-col{
     padding: 40px 12px;
@@ -1477,17 +1478,20 @@ footer{
   .hero-rating p:nth-child(2) {
     font-size: 14px;
   }
+  .icon-hero img {
+    width: 32px;
+  }
   .icon-hero1 {
     top: 0%;
-    left: 75%;
+    left: 80%;
   }
   .icon-hero2 {
     top: 50%;
-    left: 5%;
+    left: 3%;
   }
   .icon-hero3 {
     top: 75%;
-    left: 70%;
+    left: 75%;
   }
   .emphasis {
     padding: 16px;
@@ -1595,9 +1599,6 @@ footer{
   }
   .team-list {
     margin: 28px 0;
-  }
-  .rating{
-    padding-bottom: 0;
   }
   .rating-text{
     font-size: 16px;

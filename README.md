@@ -2,7 +2,7 @@
 
 Projeto front-end desenvolvido em React com Next.js, com o objetivo de fornecer uma presença online moderna e responsiva para uma clínica odontológica. Permitindo que mais pessoas conheçam a clínica, e a equipe entre em contato com quem marcar uma consulta.
 
-<img src="https://github.com/user-attachments/assets/d0130a90-2d54-4c7e-a385-e33b259c1efd">
+<img src="https://github.com/user-attachments/assets/21da85d1-c81f-4479-8448-370f30897f10">
 
 ## Tecnologias utilizadas
 
