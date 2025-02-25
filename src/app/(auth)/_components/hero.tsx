@@ -7,7 +7,7 @@ export const Hero = () => {
          <div className="container">
             <div className="hero-left">
                <h1 className="hero-title reveal-top">Experimente a <span>Excelência Odontológica</span> com um toque suave</h1>
-               <h2 className="hero-subtitle reveal-bottom">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </h2>
+               <h2 className="hero-subtitle reveal-bottom">A clínica com a melhor equipe e estrutura pronta para te atender com muito carinho e atenção.</h2>
                <Button text="Agendar" href="/schedule" classe="reveal-top" />
                <div className="hero-rating reveal-bottom">
                   <div className="hero-rating-top">

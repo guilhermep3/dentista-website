@@ -9,12 +9,14 @@ export const Modal = ({ infos, setShowModal }: props) => {
    const router = useRouter();
 
    function handleCloseModal(event: React.MouseEvent<HTMLDivElement>) {
-      if (event.target === event.currentTarget)
+      if (event.target === event.currentTarget){
          setShowModal()
+      }
    }
 
-   function handleGoSchedule(){
-      router.push('/schedule')
+   function handleGoSchedule() {
+      const serviceFormatted = infos.name.toLocaleLowerCase().replace(/\s+/g, '');
+      router.push(`/schedule?service=${serviceFormatted}`);
    }
 
    return (

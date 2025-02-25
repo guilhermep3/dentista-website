@@ -1,38 +1,50 @@
-Projeto em desenvolvimento
+# 🦷 Odontana - Website
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Projeto front-end desenvolvido em React com Next.js, com o objetivo de fornecer uma presença online moderna e responsiva para uma clínica odontológica. Permitindo que mais pessoas conheçam a clínica, e a equipe entre em contato com quem marcar uma consulta.
 
-## Getting Started
+<img src="https://github.com/user-attachments/assets/d0130a90-2d54-4c7e-a385-e33b259c1efd">
 
-First, run the development server:
+## Tecnologias utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **NextJS**: Framework react para desenvolvimento web.
+- **Typescript**: Superset do javascript que adiciona tipagem estática ao código.
+- **Css**: Para estilizar os componentes e páginas.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Páginas do projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Início**: Página inicial de apresentação de serviços, equipe, estatísticas e localização da clínica.
+- **Sobre**: Mostra o início da clínica, seus principais propósitos e a equipe de dentistas.
+- **Serviços**: Mostra todos os serviços oferecidos pela clínica.
+- **Agendar**: Formulário para marcar uma consulta.
+- **Finish**: Página de agradecimento e orientações pós-agentamento.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Bibliotecas utilizadas
 
-## Learn More
+- **scrollreveal**: Para o efeito de animação ao rolar a página.
+- **swiper**: Para criação de slides dinâmicos.
+- **react-hook-form + zod**: Facilita na criação e validação de formulários.
+- **zustand**: Gerenciamento de estado para armazenar informações do formulário. 
 
-To learn more about Next.js, take a look at the following resources:
+## Como Executar o Projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para executar o projeto localmente, siga os passos abaixo:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone o repositório:**
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/guilhermep3/dentista-website.git
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Instale as dependências**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm install ou yarn install
+   ```
+
+3. **Execute o projeto**
+
+   ```bash
+   npm run dev ou yarn dev
+   ```
+
+<p>Projeto desenvolvido por <a href="https://github.com/guilhermep3" target="_blank">Guilherme Pereira</a></p>

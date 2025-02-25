@@ -9,7 +9,7 @@ type props = {
 }
 export const TitleSection = ({ title, subtitle, secId, toCenter, revealId, revealTitle, revealDesc }: props) => {
    return (
-      <div style={{ textAlign: toCenter ? 'center' : 'start' }}>
+      <div className="title-section-div" style={{ textAlign: toCenter ? 'center' : 'start' }}>
          {secId &&
             <h2 className={`section-id ${revealId ?? 'reveal-top'}`}><img src="./svgs/star-2.svg" alt="star" className="star2" />{secId}</h2>
          }

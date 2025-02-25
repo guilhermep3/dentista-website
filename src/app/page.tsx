@@ -12,26 +12,29 @@ import { Rating } from "./(auth)/_components/rating";
 import { Local } from "./(auth)/_components/local";
 import { Footer } from "../components/footer";
 import ClientScrollReveal from "./(auth)/_components/clientScrollReveal";
-
+import { Suspense } from "react";
+import { Skeleton } from "@/components/skeleton";
 
 export default function Home() {
    return (
-      <main className="main">
-         <Header/>
-         <ClientScrollReveal>
-            <Hero/>
-            <Emphasis/>
-            <About/>
-            <Services/>
-            <Faixa/>
-            <Clinic/>
-            <Highlights/>
-            <Team/>
-            <Rating/>
-            <Local/>
-            <Footer/>
-         </ClientScrollReveal>
-         <GoTopButton/>
-      </main>
+      <Suspense fallback={<Skeleton/>}>
+         <main className="main">
+            <Header/>
+            <ClientScrollReveal>
+               <Hero/>
+               <Emphasis/>
+               <About/>
+               <Services/>
+               <Faixa/>
+               <Clinic/>
+               <Highlights/>
+               <Team/>
+               <Rating/>
+               <Local/>
+               <Footer/>
+            </ClientScrollReveal>
+            <GoTopButton/>
+         </main>
+      </Suspense>
    );
 }

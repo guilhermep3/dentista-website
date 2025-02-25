@@ -4,7 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { useFormStore } from "@/store/formStore";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const scheduleSchema = z.object({
    name: z.string().min(2, 'Preencha o campo corretamente')
@@ -41,19 +42,42 @@ const services = [
 export type formData = z.infer<typeof scheduleSchema>
 
 export const Form = () => {
-   const { register, handleSubmit, formState: {errors}} = useForm<formData>({
+   const { register, handleSubmit, formState: {errors}, setValue, getValues} = useForm<formData>({
       resolver: zodResolver(scheduleSchema)
    });
    const {setFormData} = useFormStore();
-   const router = useRouter()
+   const router = useRouter();
+   const searchParams = useSearchParams();
+   const selectedService = searchParams.get("service");
+   const [selectedServices, setSelectedServices] = useState<string[]>([]);
+
+   useEffect(() => {
+      if(selectedService){
+         const formattedService = selectedService.replace(/\s+/g, "");
+         const matchedService = services.find(service => 
+            service.toLocaleLowerCase().replace(/\s+/g, "") === formattedService
+         )
+         if(matchedService){
+            setSelectedServices((prev) => [...new Set([...prev, matchedService])]);
+            setValue("service",[matchedService]);
+         }
+      }
+   }, [selectedService, setValue]);
+
+   function handleChangeCheckbox(service: string){
+      const currentServices = getValues("service") || [];
+      const updateService = currentServices.includes(service)
+         ? currentServices.filter(s => s !== service)
+         : [...currentServices, service];
+      setSelectedServices(updateService);
+      setValue("service", updateService);
+   }
 
    const onSubmit = (data: formData) => {
       setFormData(data);
       console.log(data);
       router.push('/finish')
    };
-
-
 
    return (
       <>
@@ -101,7 +125,11 @@ export const Form = () => {
                   <legend>Selecione os serviços:</legend>
                   {services.map(service => (
                      <label key={service}>
-                        <input type="checkbox" value={service} {...register("service")} />
+                        <input type="checkbox" {...register("service")}
+                           value={service}
+                           checked={selectedServices?.includes(service)}
+                           onChange={() => handleChangeCheckbox(service)}
+                           />
                         {service}
                      </label>
                   ))}
