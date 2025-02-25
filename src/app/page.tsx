@@ -7,17 +7,18 @@ import { Faixa } from "./(auth)/_components/faixa";
 import { Clinic } from "./(auth)/_components/clinic";
 import { GoTopButton } from "@/components/GoTopButton";
 import { Highlights } from "./(auth)/_components/highlights";
-import { Team } from "./(auth)/_components/team";
+import { Team } from "./(auth)/_components/team"
 import { Rating } from "./(auth)/_components/rating";
 import { Local } from "./(auth)/_components/local";
 import { Footer } from "../components/footer";
-import ScrollRevealWrapper from "@/utils/scrollRevealWrapper";
+import ClientScrollReveal from "./(auth)/_components/clientScrollReveal";
+
 
 export default function Home() {
    return (
       <main className="main">
          <Header/>
-         <ScrollRevealWrapper>
+         <ClientScrollReveal>
             <Hero/>
             <Emphasis/>
             <About/>
@@ -29,7 +30,7 @@ export default function Home() {
             <Rating/>
             <Local/>
             <Footer/>
-         </ScrollRevealWrapper>
+         </ClientScrollReveal>
          <GoTopButton/>
       </main>
    );

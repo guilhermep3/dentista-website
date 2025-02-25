@@ -52,5 +52,6 @@ export const revealFromBottomD4 = {
 };
 
 export const initScrollReveal = (className: string, config: Object) => {
+  if(typeof window === 'undefined') return;
   sr.reveal(className, config);
 };

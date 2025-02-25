@@ -14,7 +14,7 @@ export const FullTeam = () => {
             />
             <div className="fullteam-div">
                {dentistData.map((item) => (
-                  <Dentist item={item}/>
+                  <Dentist item={item} key={item.id}/>
                ))}
             </div>
          </div>

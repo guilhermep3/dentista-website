@@ -2,14 +2,14 @@ import { Header } from "@/components/header"
 import { Footer } from "../../components/footer"
 import { TitleSection } from "@/components/titleSection"
 import { AllServices } from "../(auth)/_servicesComponents/allservices"
-import ScrollRevealWrapper from "@/utils/scrollRevealWrapper"
+import ClientScrollReveal from "../(auth)/_components/clientScrollReveal"
 
 const Page = () => {
 
    return (
       <main>
          <Header/>
-         <ScrollRevealWrapper>
+         <ClientScrollReveal>
             <section className="hero-services">
             <TitleSection toCenter={true}
                title={<>NOSSOS <span>SERVIÇOS</span></>}
@@ -17,7 +17,7 @@ const Page = () => {
                />
             </section>
             <AllServices/>
-         </ScrollRevealWrapper>
+         </ClientScrollReveal>
          <Footer/>
       </main>
    )

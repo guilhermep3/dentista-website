@@ -18,10 +18,6 @@ const ScrollRevealWrapper = ({children}: props) => {
          }
       }, []);
 
-   return (
-      <div>
-         {children}
-      </div>
-   )
+   return <div>{children}</div>;
 }
 export default ScrollRevealWrapper;

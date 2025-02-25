@@ -4,14 +4,14 @@ import { TitleSection } from "@/components/titleSection"
 import { MoreAbout } from "../(auth)/_aboutComponents/moreabout"
 import { Purpose } from "../(auth)/_aboutComponents/purpose";
 import { FullTeam } from "../(auth)/_aboutComponents/fullTeam";
-import ScrollRevealWrapper from "@/utils/scrollRevealWrapper";
+import ClientScrollReveal from "../(auth)/_components/clientScrollReveal";
 
 const Page = () => {
 
    return (
       <main id="about">
          <Header/>
-         <ScrollRevealWrapper>
+         <ClientScrollReveal>
             <section className="hero-about">
                <TitleSection toCenter={true}
                   title={<><span>SOBRE</span> NÓS</>}
@@ -21,7 +21,7 @@ const Page = () => {
             <MoreAbout />
             <Purpose/>
             <FullTeam/>
-         </ScrollRevealWrapper>
+         </ClientScrollReveal>
          <Footer/>
       </main>
    )
